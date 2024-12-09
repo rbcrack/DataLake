@@ -1,5 +1,5 @@
 ```mermaid
-[flowchart TD
+flowchart TD
     A["Start: Data Pipeline Setup"] --> B1["Prerequisites"] & C["Configure Cortex XDR"] & D["Configure Logstash"] & E["Start Logstash"] & F["Validate Data Flow"]
     B1 --> B2["Ensure Cortex XDR Access"] & B3["Install and Configure Logstash"] & B4["Obtain Azure AD Credentials for ADX"] & B5["Ensure Network Connectivity"]
     C --> C1["Log in to Cortex XDR Console"]
@@ -13,4 +13,4 @@
     E --> E1["Command: bin/logstash -f cortex_xdr.conf"] & E2["Monitor Logstash Logs"]
     F --> F1["Check Cortex XDR Export Logs"] & F2["Verify Logstash Logs"] & F3["Run SQL Query in ADX: SELECT TOP 10 FROM CortexXDR"] & G["Success: Pipeline Operational"]
     style A fill:#f9f,stroke:#333,stroke-width:2px
-    style G fill:#bbf,stroke:#333,stroke-width:2px]
+    style G fill:#bbf,stroke:#333,stroke-width:2px
